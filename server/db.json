@@ -1,0 +1,48 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Larry Stylinson",
+      "email": "larryst8@gmail.com",
+      "phone": "555-123-4567",
+      "company": "StyleInc"
+    },
+    {
+      "id": 2,
+      "name": "Amélie Carter",
+      "email": "ameliac4rter@email.com",
+      "phone": "555-845-4569",
+      "company": "Cafuné Café"
+    },
+    {
+      "id": 3,
+      "name": "Diego Ramírez",
+      "email": "diegoram@email.com",
+      "phone": "555-888-4970",
+      "company": "GoPixels"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "typeOfService": "Web Development",
+      "product": "E-commerce",
+      "concept": "An e-commerce platform for fashion thrifting",
+      "clientId": 1
+    },
+    {
+      "id": 2,
+      "typeOfService": "Branding & Design",
+      "product": "Visual Identity",
+      "concept": "A vibrant and youthful brand identity for a vegan café",
+      "clientId": 2
+    },
+    {
+      "id": 3,
+      "typeOfService": "Web Development",
+      "product": "Portfolio Website",
+      "concept": "A clean, minimalist portfolio for a freelance photographer",
+      "clientId": 3
+    }
+  ]
+}
