@@ -1,21 +1,25 @@
-import { ClientCard } from './components/ClientCard';
-import { getClients } from './services/api'
+import { CreateTable } from './components/CreateTable';
+// import { getClients } from './services/api'
 import './style.css'
+import { renderDashboard } from './views/DashboardView';
 
 document.querySelector('#app').innerHTML = `
-  <div class="principal-div">
-    <h1>hola</h1>
+  <div class="dashboard-container">
+    <div class="principal-div"></div>
   </div>
 `
 
-async function getClientsData() {
-  const clientsData = await getClients();
+// async function getClientsData() {
+//   const clientsData = await getClients();
   
-  clientsData.forEach(client => {
-    ClientCard(client)
-  });
-}
+//   clientsData.forEach(client => {
+//     ClientCard(client)
+//   });
+// }
 
-getClientsData();
+// getClientsData();
 
-// setupCounter(document.querySelector('#counter'))
+// create table
+const element = document.querySelector(".principal-div");
+renderDashboard();
+// CreateTable(element);

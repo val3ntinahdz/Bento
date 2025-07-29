@@ -1,0 +1,19 @@
+.dashboard-container {
+  padding: 2em;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: start;
+}
+
+.welcome-title {
+    text-align: start;
+    font-size: 2.5em;
+}
+
+.new-client-button {
+    background-color: red;
+    color: white;
+    width: 140px;
+    height: 50px;
+    border-radius: 15px;
+}
