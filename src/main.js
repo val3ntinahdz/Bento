@@ -14,7 +14,6 @@ async function getClientsData() {
   clientsData.forEach(client => {
     ClientCard(client)
   });
-  // console.log(...clientsData);
 }
 
 getClientsData();
