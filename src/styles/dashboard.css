@@ -4,17 +4,12 @@
 }
 
 .welcome-title {
-    text-align: start;
-    font-size: 2.5em;
+  text-align: start;
+  font-size: 2.5em;
 }
 
-.new-client-button {
-    background-color: red;
-    color: white;
-    font-size: 1.5rem;
-    font-family: "Inter", sans-serif;
-    letter-spacing: -2;
-    width: 140px;
-    height: 50px;
-    border-radius: 15px;
+header {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
 }

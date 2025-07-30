@@ -1,5 +1,6 @@
 import { CreateButtons } from '../components/CreateButtons';
 import { CreateTable } from '../components/CreateTable';
+import { SearchInput } from '../components/SearchInput';
 import '../styles/dashboard.css';
 
 // SOME DOCS
@@ -21,6 +22,9 @@ export const renderDashboard = () => {
 
     welcomeTitle.append(newSpan);
     header.appendChild(welcomeTitle);
+
+    // add the search input to the header
+    SearchInput(header);
     
     // create buttons
     // create a new client
