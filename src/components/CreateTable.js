@@ -29,7 +29,7 @@ export const CreateTable = async(element) => {
     const clientsData = await getClients();
 
     table = createTableStructure();
-    element.append(table); // apend the table to the main container
+    element.appendChild(table); // apend the table to the main container
 
     let tableHTML = "";
 

@@ -4,9 +4,7 @@ import './style.css'
 import { renderDashboard } from './views/DashboardView';
 
 document.querySelector('#app').innerHTML = `
-  <div class="dashboard-container">
-    <div class="principal-div"></div>
-  </div>
+  <div class="dashboard-container"></div>
 `
 
 // async function getClientsData() {
@@ -19,7 +17,5 @@ document.querySelector('#app').innerHTML = `
 
 // getClientsData();
 
-// create table
-const element = document.querySelector(".principal-div");
+// render dashboard with table view
 renderDashboard();
-// CreateTable(element);
