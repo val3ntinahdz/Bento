@@ -1,8 +1,7 @@
-# spaceline-client-hub
 
-# Spaceline Client Hub 🚀
+# Bento!
 
-**Spaceline Client Hub** is a lightweight internal SaaS platform designed for creative and development agencies to manage their project pipelines, client data, and proposal tracking. Built with modern frontend architecture and designed for scalability, this project serves as a streamlined client portal demo.
+**Bento** is a lightweight internal SaaS platform designed for creative and development agencies to manage their project pipelines, client data, and proposal tracking. Built with modern frontend architecture and designed for scalability, this project serves as a streamlined client portal demo.
 
 ---
 
