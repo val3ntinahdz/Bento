@@ -38,8 +38,8 @@ JSON Server Integration -> Simulated backend with CRUD operations
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/spaceline-client-hub.git
-cd spaceline-client-hub
+git clone https://github.com/yourusername/Bento.git
+cd Bento
 ```
 2. Install Dependencies
 ```bash
