@@ -44,8 +44,13 @@
     font-size: 1rem;
 }
 
+
 .input-control {
+    display: flex;
     flex-direction: column;
+}
+
+.input-control input {
     background-color: rgb(232, 232, 232);
     border: 2px solid #f0f0f0;
     border-radius: 10px;
@@ -63,4 +68,12 @@
 .input-control:focus {
     outline: 0;
     border-color: #777;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control.success input {
+    border-color: #09c372;
 }
