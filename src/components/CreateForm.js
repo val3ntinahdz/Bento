@@ -1,12 +1,15 @@
 import '../styles/forms.css';
 import { CreateButtons } from './CreateButtons';
-import { CreateTable } from './CreateTable';
 
 export const CreateForm = () => {
     const form = document.createElement("form");
     form.id = "create-new-client-form";
+    form.classList.add("hidden");
 
-    console.log("form", form);
+    const formH1 = document.createElement("h1");
+    formH1.innerText = "Create new client";
+
+    form.appendChild(formH1);
 
     const formGroup = document.createElement("div");
     formGroup.className = "form-group";
@@ -20,7 +23,8 @@ export const CreateForm = () => {
 
     const myInput = document.createElement('input');
     myInput.type = "text";
-    firstLabel.appendChild(myInput);
+    myInput.classList.add("input-control");
+    formGroup.appendChild(myInput);
 
     // second label
     const secondLabel = document.createElement("label");
@@ -30,7 +34,8 @@ export const CreateForm = () => {
 
     const secondInput = document.createElement('input');
     secondInput.type = "text";
-    secondLabel.appendChild(secondInput);
+    secondInput.classList.add("input-control");
+    formGroup.appendChild(secondInput);
 
 
     // third label 
@@ -41,13 +46,23 @@ export const CreateForm = () => {
 
     const thirdInput = document.createElement('input');
     thirdInput.type = "text";
-    thirdLabel.appendChild(thirdInput);
+    thirdInput.classList.add("input-control");
+    formGroup.appendChild(thirdInput);
 
     // create a button
     const btnClass = "form-button";
     const btnContent = "Add new client";
-    CreateButtons(btnClass, form, btnContent);
+    CreateButtons(btnClass, formGroup, btnContent);
+
+
 
     document.body.append(form);
     return form;
 }
+
+
+// TASKS PARA MAÑANA
+// Generar id´s dinamicos
+// Crear nuevos datos a partir del modelo de clientes
+// Conectar form con los datos reales
+// empezar a agregar funcionalidad JS más fuerte (en form, manejo de data, CRUD)
