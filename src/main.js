@@ -1,4 +1,4 @@
-import { CreateTable } from './components/CreateTable';
+import { CreateForm } from './components/CreateForm';
 // import { getClients } from './services/api'
 import './style.css'
 import { renderDashboard } from './views/DashboardView';
@@ -19,3 +19,4 @@ document.querySelector('#app').innerHTML = `
 
 // render dashboard with table view
 renderDashboard();
+CreateForm();

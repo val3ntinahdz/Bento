@@ -13,6 +13,8 @@ const createTableStructure = () => {
             <th>Client phone</th>
             <th>Client email</th>
             <th>Client company</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     `;
 
@@ -25,7 +27,6 @@ const createTableStructure = () => {
 
 export const CreateTable = async(element) => {
     // this is the actual element -> const dom = document.querySelector(".principal-div");
-
     const clientsData = await getClients();
 
     table = createTableStructure();
@@ -42,6 +43,12 @@ export const CreateTable = async(element) => {
                 <th>${client.phone}</th>
                 <th>${client.email}</th>
                 <th>${client.company}</th>
+                <th>
+                    <button>Edit<button/>
+                </th>
+                <th>
+                    <button>Delete<button/>
+                </th>
             </tr>
 
         `;
@@ -51,6 +58,8 @@ export const CreateTable = async(element) => {
     table.querySelector("tbody").innerHTML = tableHTML;
 }
 
+
+// create bento-style cards!
 
 // export const ClientCard = (clientData) => {
 //     const dom = document.querySelector(".principal-div");

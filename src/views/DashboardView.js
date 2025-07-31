@@ -43,11 +43,7 @@ export const renderDashboard = () => {
 
     const element = document.querySelector(".principal-div");
     CreateTable(element);
-    const clientsTable = document.querySelector("table")
-
-    // append table to the main container
-    dashboardContainer.appendChild(clientsTable);
-
+    
     // append the dashboard container to our DOM´s body
     document.body.appendChild(dashboardContainer);
 }
