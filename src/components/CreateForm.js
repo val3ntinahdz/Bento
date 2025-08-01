@@ -20,6 +20,7 @@ export const CreateForm = () => {
         type: "text",
         id: "name",
         name: "name",
+        pattern: "text"
     }))
 
     formGroup.appendChild(createFormFields({
@@ -27,6 +28,7 @@ export const CreateForm = () => {
         type: "text",
         id: "email",
         name: "email",
+        pattern: "email"
     }))
 
     formGroup.appendChild(createFormFields({
@@ -34,6 +36,7 @@ export const CreateForm = () => {
         type: "text",
         id: "phone",
         name: "phone",
+        pattern: "tel"
     }))
 
     
@@ -45,12 +48,12 @@ export const CreateForm = () => {
     document.body.append(form);
 
     // validate form inputs after form is created and appended to the DOM
-    setupFormValidation();
+    setupFormValidation(form);
     return form;
 }
 
 
-const createFormFields = ({ label, type, id, name }) => {
+const createFormFields = ({ label, type, id, name, pattern }) => {
     const inputControl = document.createElement("div");
     inputControl.className = "input-control";
 
@@ -61,6 +64,7 @@ const createFormFields = ({ label, type, id, name }) => {
     newInput.type = type;
     newInput.id = id;
     newInput.name = name;
+    newInput.pattern = pattern;
     newInput.className = "form-input";
 
     // create validation class
@@ -71,24 +75,20 @@ const createFormFields = ({ label, type, id, name }) => {
     return inputControl;
 }
 
-const setupFormValidation = () => {
-    const form = document.getElementById("create-new-client-form");
-    console.log(form);
-
-    const forminputs = document.querySelectorAll(".form-input");
-    console.log(forminputs);
+const setupFormValidation = (form) => {
+    const forminputs = document.querySelectorAll(".input-control .form-input");
 
     form.addEventListener("submit", e => {
         e.preventDefault();
 
         forminputs.forEach(input => {
             const inputValue = input.value.trim();
-            console.log(inputValue);
+            const inputControl = input.parentElement; // .input-control
 
             if(inputValue === '') {
-                setError(`${ input.id } is required`);
+                setError(inputControl, `${ input.id } is required`);
             } else {
-                setSuccess();
+                setSuccess(inputControl,`${ input.id } is correct`);
             }
 
         })
@@ -97,8 +97,7 @@ const setupFormValidation = () => {
 };
 
 
-const setError = (message) => {
-    const inputControl = document.querySelector(".input-control"); 
+const setError = (inputControl, message) => {
     const errorDisplay = inputControl.querySelector(".error");
 
     errorDisplay.innerText = message;
@@ -106,8 +105,7 @@ const setError = (message) => {
     inputControl.classList.remove("success");
 }
 
-const setSuccess = () => {
-    const inputControl = document.querySelector(".input-control"); 
+const setSuccess = (inputControl, message) => {
     const errorDisplay = inputControl.querySelector(".error");
 
     errorDisplay.innerText = message;
