@@ -49,6 +49,7 @@ export const CreateForm = () => {
     return form;
 }
 
+
 const createFormFields = ({ label, type, id, name }) => {
     const inputControl = document.createElement("div");
     inputControl.className = "input-control";
@@ -70,7 +71,6 @@ const createFormFields = ({ label, type, id, name }) => {
     return inputControl;
 }
 
-
 const setupFormValidation = () => {
     const form = document.getElementById("create-new-client-form");
     console.log(form);
@@ -86,9 +86,9 @@ const setupFormValidation = () => {
             console.log(inputValue);
 
             if(inputValue === '') {
-                setError(input.id, `${ input.id } is required`);
+                setError(`${ input.id } is required`);
             } else {
-                setSuccess(input.id);
+                setSuccess();
             }
 
         })
@@ -96,8 +96,9 @@ const setupFormValidation = () => {
 
 };
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
+
+const setError = (message) => {
+    const inputControl = document.querySelector(".input-control"); 
     const errorDisplay = inputControl.querySelector(".error");
 
     errorDisplay.innerText = message;
@@ -105,8 +106,8 @@ const setError = (element, message) => {
     inputControl.classList.remove("success");
 }
 
-const setSuccess = (element, message) => {
-    const inputControl = element.parentElement;
+const setSuccess = () => {
+    const inputControl = document.querySelector(".input-control"); 
     const errorDisplay = inputControl.querySelector(".error");
 
     errorDisplay.innerText = message;
