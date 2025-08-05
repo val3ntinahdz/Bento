@@ -1,10 +1,30 @@
 // import { CreateForm } from "../../components/CreateForm";
 
-let modal, form;
+import { CreateButtons } from "../../components/CreateButtons";
+
+let modal;
 
 export const RenderModal = () => 
 {
     // add event to handle modal pops (show & hide) in buttons (+)
+    modal = document.querySelector("#create-new-client-form")
+
+    const dashboard = document.querySelector(".dashboard-container");
+    console.log(dashboard);
+    const addClientBtn = dashboard.querySelector(".new-client-button");
+    console.log(addClientBtn)
+
+    addClientBtn.addEventListener("click", () => {
+        showModal();
+    })
+
+    // modal.addEventListener("click", (event) => {
+    //     if (event.target !== modal) {
+    //         hideModal();
+    //     }
+    // })
+
+
 
 
     // create form
@@ -18,11 +38,12 @@ export const RenderModal = () =>
 }
 
 const showModal = () => {
-
+    modal?.classList.remove(".hide-modal");
 }
 
 const hideModal = () => {
-
+    modal?.classList.add(".hide-modal");
+     // reset the form info
 }
 
 const setFormValues = () => {

@@ -1,3 +1,4 @@
+import { RenderModal } from './clients/presentation/renderModal';
 import { CreateForm } from './components/CreateForm';
 // import { getClients } from './services/api'
 import './style.css'
@@ -20,3 +21,4 @@ document.querySelector('#app').innerHTML = `
 // render dashboard with table view
 renderDashboard();
 CreateForm();
+RenderModal();

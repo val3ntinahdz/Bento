@@ -4,7 +4,7 @@ import { CreateButtons } from './CreateButtons';
 export const CreateForm = () => {
     let form = document.createElement("form");
     form.id = "create-new-client-form";
-    form.classList.add("hidden");
+    form.classList.add("hide-modal");
 
     const formH1 = document.createElement("h1");
     formH1.innerText = "Create new client";
