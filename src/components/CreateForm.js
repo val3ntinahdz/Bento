@@ -38,8 +38,15 @@ export const CreateForm = () => {
         name: "phone",
         pattern: "tel"
     }))
-
     
+    formGroup.appendChild(createFormFields({
+        label: "Contact date",
+        type: "date",
+        id: "date",
+        name: "contact-dare",
+        pattern: "date"
+    }))
+
     // create a button
     const btnClass = "form-button";
     const btnContent = "Add new client";
@@ -85,6 +92,7 @@ const setupFormValidation = (form) => {
             const inputValue = input.value.trim();
             const inputControl = input.parentElement; // .input-control
 
+
             if(inputValue === '') {
                 setError(inputControl, `${ input.id } is required`);
             } else {
@@ -113,8 +121,8 @@ const setSuccess = (inputControl, message) => {
     inputControl.classList.remove("error");
 }
 
+
 // TASKS PARA MAÑANA
-// Generar id´s dinamicos
 // Crear nuevos datos a partir del modelo de clientes
 // Conectar form con los datos reales
 // empezar a agregar funcionalidad JS más fuerte (en form, manejo de data, CRUD)

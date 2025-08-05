@@ -5,5 +5,6 @@ class clientModel {
         this.email = email;
         this.phone = phone;
         this.company = company;
+        this.contactDate = new Date();
     }
 }

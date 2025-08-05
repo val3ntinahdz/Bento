@@ -77,3 +77,8 @@
 .input-control.success input {
     border-color: #09c372;
 }
+
+/* this class will be toggled when the modal pops in! */
+.hide-modal {
+    display: none;
+}
