@@ -2,9 +2,15 @@ import '../styles/forms.css';
 import { CreateButtons } from './CreateButtons';
 
 export const CreateForm = () => {
-    let form = document.createElement("form");
+    const dashboard = document.querySelector(".dashboard-container");
+
+    const modal = document.createElement("div");
+    modal.classList.add("modal-container");
+    modal.classList.add("hide-modal");
+
+    const form = document.createElement("form");
     form.id = "create-new-client-form";
-    form.classList.add("hide-modal");
+    // form.classList.add("hide-modal");
 
     const formH1 = document.createElement("h1");
     formH1.innerText = "Create new client";
@@ -52,11 +58,12 @@ export const CreateForm = () => {
     const btnContent = "Add new client";
     CreateButtons(btnClass, formGroup, btnContent);
     
-    document.body.append(form);
-
-    // validate form inputs after form is created and appended to the DOM
+    modal.append(form);
     setupFormValidation(form);
-    return form;
+
+    dashboard.append(modal);
+    // validate form inputs after form is created and appended to the DOM
+    return modal;
 }
 
 

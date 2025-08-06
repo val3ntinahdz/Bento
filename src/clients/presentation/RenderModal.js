@@ -7,22 +7,25 @@ let modal;
 export const RenderModal = () => 
 {
     // add event to handle modal pops (show & hide) in buttons (+)
-    modal = document.querySelector("#create-new-client-form")
+    modal = document.querySelector(".modal-container")
 
     const dashboard = document.querySelector(".dashboard-container");
     console.log(dashboard);
+
     const addClientBtn = dashboard.querySelector(".new-client-button");
-    console.log(addClientBtn)
+    console.log("add client button:", addClientBtn)
 
     addClientBtn.addEventListener("click", () => {
         showModal();
     })
 
-    // modal.addEventListener("click", (event) => {
-    //     if (event.target !== modal) {
-    //         hideModal();
-    //     }
-    // })
+    const form = dashboard.querySelector("#create-new-client-form");
+
+    modal.addEventListener("click", (event) => {
+        if (event.target != form) {
+            hideModal();
+        }
+    })
 
 
 
@@ -38,11 +41,11 @@ export const RenderModal = () =>
 }
 
 const showModal = () => {
-    modal?.classList.remove(".hide-modal");
+    modal?.classList.remove("hide-modal");
 }
 
 const hideModal = () => {
-    modal?.classList.add(".hide-modal");
+    modal?.classList.add("hide-modal");
      // reset the form info
 }
 

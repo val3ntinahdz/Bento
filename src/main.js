@@ -1,4 +1,4 @@
-import { RenderModal } from './clients/presentation/renderModal';
+import { RenderModal } from './clients/presentation/RenderModal';
 import { CreateForm } from './components/CreateForm';
 // import { getClients } from './services/api'
 import './style.css'
