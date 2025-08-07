@@ -49,7 +49,7 @@ export const CreateForm = () => {
         label: "Contact date",
         type: "date",
         id: "date",
-        name: "contact-dare",
+        name: "contact-date",
         pattern: "date"
     }))
 
@@ -59,11 +59,11 @@ export const CreateForm = () => {
     CreateButtons(btnClass, formGroup, btnContent);
     
     modal.append(form);
-    setupFormValidation(form);
-
     dashboard.append(modal);
+
+    setupFormValidation(form);
     // validate form inputs after form is created and appended to the DOM
-    return modal;
+    return form;
 }
 
 

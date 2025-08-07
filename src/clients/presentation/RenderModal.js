@@ -1,7 +1,3 @@
-// import { CreateForm } from "../../components/CreateForm";
-
-import { CreateButtons } from "../../components/CreateButtons";
-
 let modal;
 
 export const RenderModal = () => 
@@ -19,10 +15,10 @@ export const RenderModal = () =>
         showModal();
     })
 
-    const form = dashboard.querySelector("#create-new-client-form");
+    const form = modal.querySelector("#create-new-client-form");
 
     modal.addEventListener("click", (event) => {
-        if (event.target != form) {
+        if (event.target.className === "modal-container") {
             hideModal();
         }
     })
