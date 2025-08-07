@@ -26,7 +26,6 @@ export const CreateForm = () => {
         type: "text",
         id: "name",
         name: "name",
-        pattern: "text"
     }))
 
     formGroup.appendChild(createFormFields({
@@ -42,7 +41,13 @@ export const CreateForm = () => {
         type: "text",
         id: "phone",
         name: "phone",
-        pattern: "tel"
+    }))
+
+    formGroup.appendChild(createFormFields({
+        label: "Client company",
+        type: "text",
+        id: "company",
+        name: "company",
     }))
     
     formGroup.appendChild(createFormFields({
@@ -50,7 +55,6 @@ export const CreateForm = () => {
         type: "date",
         id: "date",
         name: "contact-date",
-        pattern: "date"
     }))
 
     // create a button
@@ -78,7 +82,7 @@ const createFormFields = ({ label, type, id, name, pattern }) => {
     newInput.type = type;
     newInput.id = id;
     newInput.name = name;
-    newInput.pattern = pattern;
+    // newInput.pattern = pattern;
     newInput.className = "form-input";
 
     // create validation class
@@ -127,9 +131,3 @@ const setSuccess = (inputControl, message) => {
     inputControl.classList.add("success");
     inputControl.classList.remove("error");
 }
-
-
-// TASKS PARA MAÑANA
-// Crear nuevos datos a partir del modelo de clientes
-// Conectar form con los datos reales
-// empezar a agregar funcionalidad JS más fuerte (en form, manejo de data, CRUD)

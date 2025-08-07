@@ -41,8 +41,7 @@ export const renderDashboard = () => {
     dashboardContainer.appendChild(principalDiv);
     console.log(principalDiv);
 
-    const element = document.querySelector(".principal-div");
-    CreateTable(element);
+    CreateTable();
     
     // append the dashboard container to our DOM´s body
     document.body.appendChild(dashboardContainer);

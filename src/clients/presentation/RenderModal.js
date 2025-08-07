@@ -1,9 +1,14 @@
-let modal;
+import { CreateTable } from "../../components/CreateTable";
+import { addClient } from "../../services/api";
+
+let modal, form;
+let loadedClient = {};
 
 export const RenderModal = () => 
 {
     // add event to handle modal pops (show & hide) in buttons (+)
     modal = document.querySelector(".modal-container")
+    form = modal.querySelector("#create-new-client-form");
 
     const dashboard = document.querySelector(".dashboard-container");
     console.log(dashboard);
@@ -15,7 +20,6 @@ export const RenderModal = () =>
         showModal();
     })
 
-    const form = modal.querySelector("#create-new-client-form");
 
     modal.addEventListener("click", (event) => {
         if (event.target.className === "modal-container") {
@@ -23,28 +27,57 @@ export const RenderModal = () =>
         }
     })
 
+    form.addEventListener("submit", async(event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const newClient = { ...loadedClient };
 
 
+        // validate that each form field, if it is valid, then call the function to create the new instance
+        let isValid = true;
 
-    // create form
+        for(const [key, value] of formData) {
+            newClient[key] = value;
 
-    // set form values to match current model data
-    // set events to modal to handle behavior (ex: when user clicks outside the modal)
-    // set events to form in order to create new data (FormData())
-        // when user clicks submit, call method "addClient()" from backend to append new data
+            if(!value || value.trim() === '') {
+                isValid = false;
+                console.error(`The field ${key} is required`)
+            }
+        }
 
-    // update the DOM view to see the new client reflected in the table (call CreateTable() component)
+        try {
+
+            if (isValid) {
+                const createdClient = await addClient({ clientData: newClient })
+                console.log(createdClient);
+
+                hideModal(); // render table agaiN!
+                await CreateTable()
+            }
+
+        } catch (error) {
+            console.error(`could not create new data, ${error}`);
+        }
+    })
 }
 
 const showModal = () => {
     modal?.classList.remove("hide-modal");
+    // setFormValues(client);
 }
 
 const hideModal = () => {
     modal?.classList.add("hide-modal");
-     // reset the form info
+    form.reset();
 }
 
-const setFormValues = () => {
+const setFormValues = (client) => {
+    form.querySelector('[name="name"]').value = client.name;
+    form.querySelector('[name="phone"]').value = client.phone;
+    form.querySelector('[name="email"]').value = client.email;
+    form.querySelector('[name="company"]').value = client.company;
+    form.querySelector('[name="contact-date"]').value = client.contactDate;
 
+    loadedClient = client;
 }

@@ -3,6 +3,7 @@ import { getClients } from "../services/api";
 let table;
 
 const createTableStructure = () => {
+
     const clientsTable = document.createElement("table");
     const tableHeaders = document.createElement("thead");
 
@@ -25,12 +26,14 @@ const createTableStructure = () => {
 }
 
 
-export const CreateTable = async(element) => {
+export const CreateTable = async() => {
     // this is the actual element -> const dom = document.querySelector(".principal-div");
     const clientsData = await getClients();
-
     table = createTableStructure();
-    element.appendChild(table); // apend the table to the main container
+    
+
+    const element = document.querySelector(".principal-div");
+    element.append(table); // apend the table to the main container
 
     let tableHTML = "";
 
