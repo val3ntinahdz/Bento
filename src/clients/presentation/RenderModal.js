@@ -49,8 +49,13 @@ export const RenderModal = () =>
         try {
 
             if (isValid) {
+
                 const createdClient = await addClient({ clientData: newClient })
                 console.log(createdClient);
+
+                if (!createdClient) {
+                    throw new Error("Failed API call. Try again!");
+                }
 
                 hideModal(); // render table agaiN!
                 await CreateTable()

@@ -27,40 +27,73 @@ const createTableStructure = () => {
 
 
 export const CreateTable = async() => {
-    // this is the actual element -> const dom = document.querySelector(".principal-div");
+    // check if table already exists. If it does, then only update the tbody structure of the table 
     const clientsData = await getClients();
-    table = createTableStructure();
-    
 
-    const element = document.querySelector(".principal-div");
-    element.append(table); // apend the table to the main container
-
-    let tableHTML = "";
-
-    clientsData.forEach(client => {
-
-        tableHTML += `
-            <tr>
-                <th>${client.id}</th>
-                <th>${client.name}</th>
-                <th>${client.phone}</th>
-                <th>${client.email}</th>
-                <th>${client.company}</th>
-                <th>
-                    <button>Edit<button/>
-                </th>
-                <th>
-                    <button>Delete<button/>
-                </th>
-            </tr>
-
-        `;
+    if (!table) {
         
-    })
+        table = createTableStructure();
     
-    table.querySelector("tbody").innerHTML = tableHTML;
+        const element = document.querySelector(".principal-div");
+        element.append(table); // apend the table to the main container
+    
+        let tableHTML = "";
+    
+        clientsData.forEach(client => {
+    
+            tableHTML += `
+                <tr>
+                    <th>${client.id}</th>
+                    <th>${client.name}</th>
+                    <th>${client.phone}</th>
+                    <th>${client.email}</th>
+                    <th>${client.company}</th>
+                    <th>
+                        <button>Edit<button/>
+                    </th>
+                    <th>
+                        <button>Delete<button/>
+                    </th>
+                </tr>
+    
+            `;
+            
+        })
+
+        table.querySelector("tbody").innerHTML = tableHTML;
+
+    } else {
+        table = document.querySelector("table");
+        const createdClient = clientsData[clientsData.length - 1];
+
+        // About "insertAdjacentHTML" method: https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+        table.querySelector("tbody").insertAdjacentHTML("beforeend", updateTable(createdClient));
+    }
 }
 
+
+const updateTable = (client) => {
+
+    const appendTbody = `
+        <tr>
+            <th>${client.id}</th>
+            <th>${client.name}</th>
+            <th>${client.phone}</th>
+            <th>${client.email}</th>
+            <th>${client.company}</th>
+
+            <th>
+                <button>Edit</button>
+            </th>
+            <th>
+                <button>Delete</button>
+            </th>
+        </tr>
+    `;
+
+    return appendTbody;
+
+}
 
 // create bento-style cards!
 
