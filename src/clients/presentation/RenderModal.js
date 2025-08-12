@@ -1,5 +1,5 @@
 import { CreateTable } from "../../components/CreateTable";
-import { addClient } from "../../services/api";
+import { addClient, getClient, updateClient } from "../../services/api";
 
 let modal, form;
 let loadedClient = {};
@@ -15,6 +15,7 @@ export const RenderModal = () =>
 
     const addClientBtn = dashboard.querySelector(".new-client-button");
     console.log("add client button:", addClientBtn)
+
 
     addClientBtn.addEventListener("click", () => {
         showModal();
@@ -65,17 +66,24 @@ export const RenderModal = () =>
             console.error(`could not create new data, ${error}`);
         }
     })
+
+
 }
 
-const showModal = () => {
+export const showModal = async(id) => {
     modal?.classList.remove("hide-modal");
     // setFormValues(client);
+    if (!id) return;
+    
+    const clientId = await getClient(id);
+    setFormValues(clientId); // this help us "autofill" the form when trying to edit!
 }
 
 const hideModal = () => {
     modal?.classList.add("hide-modal");
     form.reset();
 }
+
 
 const setFormValues = (client) => {
     form.querySelector('[name="name"]').value = client.name;

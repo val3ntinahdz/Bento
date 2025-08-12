@@ -1,4 +1,5 @@
-import { getClients } from "../services/api";
+import { showModal } from "../clients/presentation/RenderModal";
+import { getClient, getClients, updateClient } from "../services/api";
 
 let table;
 
@@ -43,16 +44,16 @@ export const CreateTable = async() => {
     
             tableHTML += `
                 <tr>
-                    <th>${client.id}</th>
+                    <th data-id=${client.id}>${client.id}</th>
                     <th>${client.name}</th>
                     <th>${client.phone}</th>
                     <th>${client.email}</th>
                     <th>${client.company}</th>
                     <th>
-                        <button>Edit<button/>
+                        <a href="#/" class="btn-edit" data-id="${client.id}">Edit</a>
                     </th>
                     <th>
-                        <button>Delete<button/>
+                        <a href="#/" class="btn-delete" data-id="${client.id}">Delete</a>
                     </th>
                 </tr>
     
@@ -62,6 +63,7 @@ export const CreateTable = async() => {
 
         table.querySelector("tbody").innerHTML = tableHTML;
 
+
     } else {
         table = document.querySelector("table");
         const createdClient = clientsData[clientsData.length - 1];
@@ -69,6 +71,10 @@ export const CreateTable = async() => {
         // About "insertAdjacentHTML" method: https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
         table.querySelector("tbody").insertAdjacentHTML("beforeend", updateTable(createdClient));
     }
+
+    table.addEventListener("click", selectClientFromTable);
+
+    return table;
 }
 
 
@@ -83,10 +89,10 @@ const updateTable = (client) => {
             <th>${client.company}</th>
 
             <th>
-                <button>Edit</button>
+                <button class="btn-edit">Edit</button>
             </th>
             <th>
-                <button>Delete</button>
+                <button class="btn-delete">Delete</button>
             </th>
         </tr>
     `;
@@ -95,6 +101,16 @@ const updateTable = (client) => {
 
 }
 
+const selectClientFromTable = (event) => {
+    const element = event.target.closest(".btn-edit");
+    const userId = element.getAttribute("data-id");
+
+    showModal(userId);
+}
+
+const deleteClientFromTable = (event) => {
+
+}
 // create bento-style cards!
 
 // export const ClientCard = (clientData) => {
