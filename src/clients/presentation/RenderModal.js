@@ -16,6 +16,8 @@ export const RenderModal = () =>
     const addClientBtn = dashboard.querySelector(".new-client-button");
     console.log("add client button:", addClientBtn)
 
+    // const editBtn = dashboard.querySelector(".btn-edit");
+
 
     addClientBtn.addEventListener("click", () => {
         showModal();
@@ -30,6 +32,10 @@ export const RenderModal = () =>
 
     form.addEventListener("submit", async(event) => {
         event.preventDefault();
+
+        if (event.target === addClientBtn) {
+            
+        }
 
         const formData = new FormData(form);
         const newClient = { ...loadedClient };
@@ -66,15 +72,13 @@ export const RenderModal = () =>
             console.error(`could not create new data, ${error}`);
         }
     })
-
-
 }
 
 export const showModal = async(id) => {
     modal?.classList.remove("hide-modal");
     // setFormValues(client);
     if (!id) return;
-    
+
     const clientId = await getClient(id);
     setFormValues(clientId); // this help us "autofill" the form when trying to edit!
 }

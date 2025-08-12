@@ -11,15 +11,12 @@ export const getClient = async(id) => {
     const clientURL = `${url}/${id}`;
     const res = await fetch(clientURL);
     const client = await res.json();
-    
+
     console.log(client);
 
     return client;
 }
 
-export const saveUser = () => {
-
-}
 
 export const addClient = async({ clientData }) => {
     try {
@@ -45,6 +42,7 @@ export const addClient = async({ clientData }) => {
         console.log(`Could not create new user: ${error}`);
     }
 } 
+
 
 export const updateClient = async(id) => {
     const clientToUpdate = getClient(id);

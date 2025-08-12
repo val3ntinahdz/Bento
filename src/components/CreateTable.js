@@ -89,10 +89,10 @@ const updateTable = (client) => {
             <th>${client.company}</th>
 
             <th>
-                <button class="btn-edit">Edit</button>
+                <a href="#/" class="btn-edit" data-id="${client.id}">Edit</a>
             </th>
             <th>
-                <button class="btn-delete">Delete</button>
+                <a href="#/" class="btn-delete" data-id="${client.id}">Delete</a>
             </th>
         </tr>
     `;
@@ -106,6 +106,7 @@ const selectClientFromTable = (event) => {
     const userId = element.getAttribute("data-id");
 
     showModal(userId);
+    // updateClient(userId);
 }
 
 const deleteClientFromTable = (event) => {
