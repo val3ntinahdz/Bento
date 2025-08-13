@@ -2,53 +2,32 @@
   "clients": [
     {
       "id": "1",
-      "name": "Larry Stylinson",
+      "name": "Larry Perez",
       "email": "larryst8@gmail.com",
       "phone": "555-123-4567",
       "company": "StyleInc",
-      "contactDate": "04/08/2025"
+      "contactDate": "04/08/2025",
+      "contact-date": "2025-08-23"
     },
     {
       "id": "2",
-      "name": "Amelia Carter",
+      "name": "Amelia Heernandez Lopez",
       "email": "ameliac4rter@email.com",
       "phone": "555-845-4569",
       "company": "Cafuné Café",
-      "contactDate": "04/08/2025"
+      "contactDate": "04/08/2025",
+      "contact-date": "2025-08-15"
     },
     {
-      "id": "3",
-      "name": "Diego Ramírez",
-      "email": "diegoram@email.com",
-      "phone": "555-888-4970",
-      "company": "GoPixels",
-      "contactDate": "04/08/2025"
+      "id": "3"
     },
     {
-      "id": "4974",
-      "name": "Valentina",
-      "email": "valentinaleonh8@gmail.com",
-      "phone": "+52 951 579 2953",
-      "company": "Spaceline Agency",
+      "id": "cf36",
+      "name": "Vaish Anoka",
+      "email": "ameliac4rter@email.com",
+      "phone": "9515792953",
+      "company": "StyleInc",
       "contact-date": "2025-08-16"
-    },
-    {
-      "id": "1",
-      "name": "Larry Leon",
-      "email": "larryst8@gmail.com",
-      "phone": "555-123-4567",
-      "company": "StyleInc",
-      "contactDate": "04/08/2025",
-      "contact-date": "2025-08-11"
-    },
-    {
-      "id": "1",
-      "name": "Larry Stylinsl",
-      "email": "larryst8@gmail.com",
-      "phone": "555-123-4567",
-      "company": "StyleInc",
-      "contactDate": "04/08/2025",
-      "contact-date": "2025-08-08"
     }
   ],
   "projects": [

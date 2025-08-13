@@ -15,6 +15,7 @@ const createTableStructure = () => {
             <th>Client phone</th>
             <th>Client email</th>
             <th>Client company</th>
+            <th>Contact Date</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -49,6 +50,7 @@ export const CreateTable = async() => {
                     <th>${client.phone}</th>
                     <th>${client.email}</th>
                     <th>${client.company}</th>
+                    <th>${client.contactDate}</th>
                     <th>
                         <a href="#/" class="btn-edit" data-id="${client.id}">Edit</a>
                     </th>
@@ -87,6 +89,7 @@ const updateTable = (client) => {
             <th>${client.phone}</th>
             <th>${client.email}</th>
             <th>${client.company}</th>
+            <th>${client.contactDate}</th>
 
             <th>
                 <a href="#/" class="btn-edit" data-id="${client.id}">Edit</a>
@@ -106,7 +109,6 @@ const selectClientFromTable = (event) => {
     const userId = element.getAttribute("data-id");
 
     showModal(userId);
-    // updateClient(userId);
 }
 
 const deleteClientFromTable = (event) => {

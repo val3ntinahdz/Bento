@@ -13,15 +13,15 @@ export const RenderModal = () =>
     const dashboard = document.querySelector(".dashboard-container");
     console.log(dashboard);
 
-    const addClientBtn = dashboard.querySelector(".new-client-button");
-    console.log("add client button:", addClientBtn)
+    let clientBtn = dashboard.querySelector(".new-client-button");
+    console.log("add client button:", clientBtn)
 
     // const editBtn = dashboard.querySelector(".btn-edit");
 
 
-    addClientBtn.addEventListener("click", () => {
-        showModal();
-    })
+    clientBtn.addEventListener("click", () => {
+        showModal()
+    });
 
 
     modal.addEventListener("click", (event) => {
@@ -30,12 +30,9 @@ export const RenderModal = () =>
         }
     })
 
+
     form.addEventListener("submit", async(event) => {
         event.preventDefault();
-
-        if (event.target === addClientBtn) {
-            
-        }
 
         const formData = new FormData(form);
         const newClient = { ...loadedClient };
@@ -57,12 +54,19 @@ export const RenderModal = () =>
 
             if (isValid) {
 
-                const createdClient = await addClient({ clientData: newClient })
-                console.log(createdClient);
-
-                if (!createdClient) {
-                    throw new Error("Failed API call. Try again!");
+                if (loadedClient.id) {
+                    await updateClient({ clientData: newClient })
+                    console.log("Editing client with ID:", loadedClient.id);
+                } else {
+                    const createdClient = await addClient({ clientData: newClient })
+                    console.log("Data being sent:", newClient);
+                    console.log(createdClient);
+    
+                    if (!createdClient) {
+                        throw new Error("Failed API call. Try again!");
+                    }
                 }
+
 
                 hideModal(); // render table agaiN!
                 await CreateTable()

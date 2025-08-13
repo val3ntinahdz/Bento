@@ -17,6 +17,8 @@ export const getClient = async(id) => {
     return client;
 }
 
+// export const saveUser = async(id)
+
 
 export const addClient = async({ clientData }) => {
     try {
@@ -44,8 +46,17 @@ export const addClient = async({ clientData }) => {
 } 
 
 
-export const updateClient = async(id) => {
-    const clientToUpdate = getClient(id);
+export const updateClient = async({ clientData }) => {
+    const clientToUpdate = `${url}/${clientData.id}`;
+
+    console.log("Request details:", {
+    method: "PATCH",
+    url: clientToUpdate,
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(clientData) // This is what you're currently sending
+    });
     
     try {
         const res = await fetch(clientToUpdate, {
@@ -54,7 +65,7 @@ export const updateClient = async(id) => {
                 'Content-Type': 'application/json'
             },
 
-            body: JSON.stringify(id)
+            body: JSON.stringify(clientData)
         })
 
         if (!res.ok) {
@@ -70,6 +81,8 @@ export const updateClient = async(id) => {
         console.log(`Could not create new user: ${error}`);
     }
 
+    console.log("Attempting to update at:", clientToUpdate);
+    console.log("With body:", { id: clientData.id });
 }
 
 export const deleteClient = () => {

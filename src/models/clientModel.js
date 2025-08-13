@@ -1,4 +1,4 @@
-class clientModel {
+export class clientModel {
     constructor(id, name, email, phone, company) {
         this.id = id;
         this.name = name;

@@ -59,7 +59,7 @@ export const CreateForm = () => {
 
     // create a button
     const btnClass = "form-button";
-    const btnContent = "Add new client";
+    const btnContent = "Save";
     CreateButtons(btnClass, formGroup, btnContent);
     
     modal.append(form);
@@ -71,7 +71,7 @@ export const CreateForm = () => {
 }
 
 
-const createFormFields = ({ label, type, id, name, pattern }) => {
+const createFormFields = ({ label, type, id, name }) => {
     const inputControl = document.createElement("div");
     inputControl.className = "input-control";
 
