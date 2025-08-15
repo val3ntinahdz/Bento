@@ -1,5 +1,5 @@
 import { showModal } from "../clients/presentation/RenderModal";
-import { getClient, getClients, updateClient } from "../services/api";
+import { deleteClient, getClients } from "../services/api";
 
 let table;
 
@@ -70,6 +70,7 @@ export const CreateTable = async() => {
     }
 
     table.addEventListener("click", selectClientFromTable);
+    table.addEventListener("click", deleteClientFromTable);
 
     return table;
 }
@@ -115,9 +116,6 @@ export const updateTable = (client) => {
     }
 }
 
-const createTBody = () => {
-
-}
 
 const selectClientFromTable = (event) => {
     const element = event.target.closest(".btn-edit");
@@ -126,6 +124,22 @@ const selectClientFromTable = (event) => {
     showModal(userId);
 }
 
-const deleteClientFromTable = (event) => {
+const deleteClientFromTable = async(event) => {
+    const element = event.target.closest(".btn-delete");
 
+    console.log("element to delete", element);
+    const dataId = element.getAttribute("data-id");
+
+    console.log("PARENT ELEMENT", element.parentElement.parentElement);
+
+    try {
+        if (dataId) {
+            const deletedClient = await deleteClient(dataId);
+            console.log(deletedClient);
+    
+            table.deleteRow(dataId);
+        }
+    } catch (error) {
+        console.log(`Could not delete data from the table - ${error}`);
+    }
 }

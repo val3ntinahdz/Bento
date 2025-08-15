@@ -8,7 +8,7 @@ export const getClients = async() => {
 }
 
 export const getClient = async(id) => {
-    const clientURL = `${url}/${id}`;
+    const clientURL = `${ url }/${ id }`;
     const res = await fetch(clientURL);
     const client = await res.json();
 
@@ -47,7 +47,7 @@ export const addClient = async({ clientData }) => {
 
 
 export const updateClient = async({ clientData }) => {
-    const clientToUpdate = `${url}/${clientData.id}`;
+    const clientToUpdate = `${ url }/${ clientData.id }`;
 
     console.log("Request details:", {
     method: "PATCH",
@@ -85,6 +85,15 @@ export const updateClient = async({ clientData }) => {
     console.log("With body:", { id: clientData.id });
 }
 
-export const deleteClient = () => {
-    
+export const deleteClient = async(id) => {
+    const clientToDelete = `${ url }/${ id }`;
+
+    const res = await fetch(clientToDelete, {
+        method: "DELETE",
+    });
+
+    const deleteResult = res.json();
+    console.log("The object deleted", await deleteResult);
+
+    return deleteResult;
 }

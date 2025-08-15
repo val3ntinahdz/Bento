@@ -1,68 +1,12 @@
 {
   "clients": [
     {
-      "id": "1",
-      "name": "Larry Stylinson",
-      "email": "larryst8@gmail.com",
-      "phone": "555-123-4567",
-      "company": "StyleInc",
-      "contactDate": "04/08/2025"
-    },
-    {
-      "id": "2",
-      "name": "Amelia Carter",
-      "email": "ameliac4rter@email.com",
-      "phone": "555-845-4569",
-      "company": "Cafuné Café",
-      "contactDate": "04/08/2025"
-    },
-    {
       "id": "3",
-      "name": "Valentina León",
-      "email": "valeonhdz06@gmail.com",
-      "phone": "9515792953",
-      "company": "Lover House",
-      "contactDate": "2025-08-01"
-    },
-    {
-      "id": "7ee9",
-      "name": "Taylor Allison Chaaaaa",
-      "email": "taytay13@gmail.com",
-      "phone": "458972987389",
-      "company": "Lover House",
-      "contactDate": "2025-08-23"
-    },
-    {
-      "id": "69e1",
-      "name": "Taylor Allison S.",
-      "email": "taytay13@gmail.com",
-      "phone": "458972987389",
-      "company": "Lover House",
-      "contactDate": "2025-08-23"
-    },
-    {
-      "id": "d127",
-      "name": "Taylor Allison S.",
-      "email": "taytay13@gmail.com",
-      "phone": "458972987389",
-      "company": "Lover House",
-      "contactDate": "2025-08-23"
-    },
-    {
-      "id": "4f3e",
-      "name": "Vak",
-      "email": "larryst8@gmail.com",
-      "phone": "9515792953",
-      "company": "GoPi",
-      "contactDate": "2025-08-23"
-    },
-    {
-      "id": "f49a",
-      "name": "Valeeeeeeentin",
-      "email": "ameliac4rter@email.com",
-      "phone": "9515792953",
+      "name": "Diego Ramírez Hernan",
+      "email": "diegoram@email.com",
+      "phone": "555-888-4970",
       "company": "GoPixels",
-      "contactDate": "2025-08-16"
+      "contactDate": "2025-08-31"
     }
   ],
   "projects": [
@@ -71,14 +15,14 @@
       "typeOfService": "Web Development",
       "product": "E-commerce",
       "concept": "An e-commerce platform for fashion thrifting",
-      "clientId": "1"
+      "clientId": null
     },
     {
       "id": "2",
       "typeOfService": "Branding & Design",
       "product": "Visual Identity",
       "concept": "A vibrant and youthful brand identity for a vegan café",
-      "clientId": "2"
+      "clientId": null
     },
     {
       "id": "3",
