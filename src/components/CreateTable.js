@@ -1,5 +1,6 @@
 import { showModal } from "../clients/presentation/RenderModal";
 import { deleteClient, getClients } from "../services/api";
+import { ShowAlert } from "./ShowAlert";
 
 let table;
 
@@ -56,7 +57,7 @@ export const CreateTable = async() => {
                         <a href="#/" class="btn-edit" data-id="${client.id}">Edit</a>
                     </th>
                     <th>
-                        <a href="#/" class="btn-delete" data-id="${client.id}">Delete</a>
+                        <a href="#/" class="btn-delete show-alert" data-id="${client.id}">Delete</a>
                     </th>
                 </tr>
     
@@ -90,7 +91,7 @@ export const updateTable = (client) => {
                 <a href="#/" class="btn-edit" data-id="${client.id}">Edit</a>
             </th>
             <th>
-                <a href="#/" class="btn-delete" data-id="${client.id}">Delete</a>
+                <a href="#/" class="btn-delete show-alert" data-id="${client.id}">Delete</a>
             </th>
         </tr>
     `;
@@ -127,19 +128,19 @@ const selectClientFromTable = (event) => {
 const deleteClientFromTable = async(event) => {
     const element = event.target.closest(".btn-delete");
 
-    console.log("element to delete", element);
-    const dataId = element.getAttribute("data-id");
-
-    console.log("PARENT ELEMENT", element.parentElement.parentElement);
-
-    try {
-        if (dataId) {
-            const deletedClient = await deleteClient(dataId);
-            console.log(deletedClient);
+    if (await ShowAlert()) {
+        const dataId = element.getAttribute("data-id");
     
-            table.deleteRow(dataId);
+        try {
+            if (dataId) {
+                const deletedClient = await deleteClient(dataId);
+                console.log(deletedClient);
+        
+                table.deleteRow(dataId);
+            }
+        } catch (error) {
+            console.log(`Could not delete data from the table - ${error}`);
         }
-    } catch (error) {
-        console.log(`Could not delete data from the table - ${error}`);
     }
+
 }
