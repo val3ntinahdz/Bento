@@ -2,32 +2,46 @@
   "clients": [
     {
       "id": "1",
-      "name": "Larry Perez",
+      "name": "Larry Perri Ruiz Hernandez",
       "email": "larryst8@gmail.com",
       "phone": "555-123-4567",
       "company": "StyleInc",
       "contactDate": "04/08/2025",
-      "contact-date": "2025-08-23"
+      "contact-date": "2025-08-08"
     },
     {
       "id": "2",
-      "name": "Amelia Heernandez Lopez",
+      "name": "Ame Goma Lopez",
       "email": "ameliac4rter@email.com",
       "phone": "555-845-4569",
       "company": "Cafuné Café",
       "contactDate": "04/08/2025",
+      "contact-date": "2025-08-09"
+    },
+    {
+      "id": "3",
+      "name": "Diego Ram",
+      "email": "diegoram@email.com",
+      "phone": "555-888-4970",
+      "company": "GoPixels",
+      "contactDate": "04/08/2025",
+      "contact-date": "2025-08-31"
+    },
+    {
+      "id": "5ad5",
+      "name": "Taylor Allison S.",
+      "email": "taytay13@gmail.com",
+      "phone": "1314837328",
+      "company": "Lover House",
       "contact-date": "2025-08-15"
     },
     {
-      "id": "3"
-    },
-    {
-      "id": "cf36",
-      "name": "Vaish Anoka",
-      "email": "ameliac4rter@email.com",
+      "id": "bd8c",
+      "name": "Masha Hello",
+      "email": "diegoram@email.com",
       "phone": "9515792953",
-      "company": "StyleInc",
-      "contact-date": "2025-08-16"
+      "company": "GoPixels",
+      "contact-date": "2025-08-09"
     }
   ],
   "projects": [

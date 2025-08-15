@@ -1,4 +1,4 @@
-import { CreateTable } from "../../components/CreateTable";
+import { CreateTable, updateTable } from "../../components/CreateTable";
 import { addClient, getClient, updateClient } from "../../services/api";
 
 let modal, form;
@@ -55,8 +55,10 @@ export const RenderModal = () =>
             if (isValid) {
 
                 if (loadedClient.id) {
-                    await updateClient({ clientData: newClient })
+                    const updatedClient = await updateClient({ clientData: newClient })
                     console.log("Editing client with ID:", loadedClient.id);
+
+                    updateTable(updatedClient);
                 } else {
                     const createdClient = await addClient({ clientData: newClient })
                     console.log("Data being sent:", newClient);
@@ -65,6 +67,8 @@ export const RenderModal = () =>
                     if (!createdClient) {
                         throw new Error("Failed API call. Try again!");
                     }
+
+                    updateTable(createdClient);
                 }
 
 

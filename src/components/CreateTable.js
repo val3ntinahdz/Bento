@@ -41,6 +41,7 @@ export const CreateTable = async() => {
     
         let tableHTML = "";
     
+        
         clientsData.forEach(client => {
     
             tableHTML += `
@@ -66,12 +67,6 @@ export const CreateTable = async() => {
         table.querySelector("tbody").innerHTML = tableHTML;
 
 
-    } else {
-        table = document.querySelector("table");
-        const createdClient = clientsData[clientsData.length - 1];
-
-        // About "insertAdjacentHTML" method: https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
-        table.querySelector("tbody").insertAdjacentHTML("beforeend", updateTable(createdClient));
     }
 
     table.addEventListener("click", selectClientFromTable);
@@ -80,9 +75,8 @@ export const CreateTable = async() => {
 }
 
 
-const updateTable = (client) => {
-
-    const appendTbody = `
+export const updateTable = (client) => {
+    const rowHTML = `
         <tr>
             <th>${client.id}</th>
             <th>${client.name}</th>
@@ -100,7 +94,28 @@ const updateTable = (client) => {
         </tr>
     `;
 
-    return appendTbody;
+    const existingRow = table.querySelector(`tr th[data-id="${client.id}"]`)?.closest('tr');
+    console.log("existing ROW", existingRow);
+
+    if (existingRow) {
+        // create a new template to append the modified object
+        const template = document.createElement('template');
+        template.innerHTML = rowHTML.trim(); // make sure there are no blank spaces
+
+        // look for our template content's first element child (should be TR: the whole row)
+        const newRow = template.content.firstElementChild;
+        console.log("the new row with updated data", newRow);
+
+        // replace the existing row content with the new one
+        // about replaceWith() -> https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
+        existingRow.replaceWith(newRow);
+
+    } else {
+        table.querySelector("tbody").insertAdjacentHTML("beforeend", rowHTML);
+    }
+}
+
+const createTBody = () => {
 
 }
 
@@ -114,33 +129,3 @@ const selectClientFromTable = (event) => {
 const deleteClientFromTable = (event) => {
 
 }
-// create bento-style cards!
-
-// export const ClientCard = (clientData) => {
-//     const dom = document.querySelector(".principal-div");
-
-//     const tr = document.createElement("tr");
-
-//     const ths = [
-//         `<th>Client ID: ${clientData.id}</th>`,
-//         `<th>Client name: ${clientData.name}</th>`,
-//         `<th>Client phone: ${clientData.phone}</th>`,
-//         `<th>Client email: ${clientData.email}</th>`,
-//         `<th>Client company: ${clientData.company}</th>` 
-//     ]
-
-//     ths.forEach(th => {
-//         tr.appendChild(th);
-//     })
-    
-//     div +=
-//         thead.appendChild(tr);
-//         tbody.appendChild(thead);
-
-//     dom.innerHTML = div;
-//     clientsTable.appendChild(tbody); // fix the table logic!
-// }
-
-
-
-
