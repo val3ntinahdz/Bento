@@ -54,7 +54,7 @@ export const CreateForm = () => {
         label: "Contact date",
         type: "date",
         id: "date",
-        name: "contact-date",
+        name: "contactDate",
     }))
 
     // create a button

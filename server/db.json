@@ -2,46 +2,67 @@
   "clients": [
     {
       "id": "1",
-      "name": "Larry Perri Ruiz Hernandez",
+      "name": "Larry Stylinson",
       "email": "larryst8@gmail.com",
       "phone": "555-123-4567",
       "company": "StyleInc",
-      "contactDate": "04/08/2025",
-      "contact-date": "2025-08-08"
+      "contactDate": "04/08/2025"
     },
     {
       "id": "2",
-      "name": "Ame Goma Lopez",
+      "name": "Amelia Carter",
       "email": "ameliac4rter@email.com",
       "phone": "555-845-4569",
       "company": "Cafuné Café",
-      "contactDate": "04/08/2025",
-      "contact-date": "2025-08-09"
+      "contactDate": "04/08/2025"
     },
     {
       "id": "3",
-      "name": "Diego Ram",
-      "email": "diegoram@email.com",
-      "phone": "555-888-4970",
-      "company": "GoPixels",
-      "contactDate": "04/08/2025",
-      "contact-date": "2025-08-31"
+      "name": "Valentina León",
+      "email": "valeonhdz06@gmail.com",
+      "phone": "9515792953",
+      "company": "Lover House",
+      "contactDate": "2025-08-01"
     },
     {
-      "id": "5ad5",
+      "id": "7ee9",
+      "name": "Taylor Allison Chaaaaa",
+      "email": "taytay13@gmail.com",
+      "phone": "458972987389",
+      "company": "Lover House",
+      "contactDate": "2025-08-23"
+    },
+    {
+      "id": "69e1",
       "name": "Taylor Allison S.",
       "email": "taytay13@gmail.com",
-      "phone": "1314837328",
+      "phone": "458972987389",
       "company": "Lover House",
-      "contact-date": "2025-08-15"
+      "contactDate": "2025-08-23"
     },
     {
-      "id": "bd8c",
-      "name": "Masha Hello",
-      "email": "diegoram@email.com",
+      "id": "d127",
+      "name": "Taylor Allison S.",
+      "email": "taytay13@gmail.com",
+      "phone": "458972987389",
+      "company": "Lover House",
+      "contactDate": "2025-08-23"
+    },
+    {
+      "id": "4f3e",
+      "name": "Vak",
+      "email": "larryst8@gmail.com",
+      "phone": "9515792953",
+      "company": "GoPi",
+      "contactDate": "2025-08-23"
+    },
+    {
+      "id": "f49a",
+      "name": "Valeeeeeeentin",
+      "email": "ameliac4rter@email.com",
       "phone": "9515792953",
       "company": "GoPixels",
-      "contact-date": "2025-08-09"
+      "contactDate": "2025-08-16"
     }
   ],
   "projects": [

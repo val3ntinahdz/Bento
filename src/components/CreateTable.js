@@ -78,7 +78,7 @@ export const CreateTable = async() => {
 export const updateTable = (client) => {
     const rowHTML = `
         <tr>
-            <th>${client.id}</th>
+            <th data-id=${client.id}>${client.id}</th>
             <th>${client.name}</th>
             <th>${client.phone}</th>
             <th>${client.email}</th>

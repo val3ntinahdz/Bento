@@ -102,7 +102,7 @@ const setFormValues = (client) => {
     form.querySelector('[name="phone"]').value = client.phone;
     form.querySelector('[name="email"]').value = client.email;
     form.querySelector('[name="company"]').value = client.company;
-    form.querySelector('[name="contact-date"]').value = client.contactDate;
+    form.querySelector('[name="contactDate"]').value = client.contactDate;
 
     loadedClient = client;
 }
