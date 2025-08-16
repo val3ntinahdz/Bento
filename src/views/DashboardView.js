@@ -10,7 +10,8 @@ export const renderDashboard = () => {
     const dashboardContainer = document.querySelector(".dashboard-container");
 
     // create headers
-    const header = document.createElement("header");
+    const headerContainer = document.createElement("header");
+    headerContainer.className = "header-container";
 
     const welcomeTitle = document.createElement("h1");
     welcomeTitle.innerText = "Welcome, "
@@ -21,23 +22,24 @@ export const renderDashboard = () => {
     newSpan.className = "title-span";
 
     welcomeTitle.append(newSpan);
-    header.appendChild(welcomeTitle);
+    headerContainer.appendChild(welcomeTitle);
 
     // add the search input to the header
-    SearchInput(header);
+    SearchInput(headerContainer);
     
-    // create buttons
     // create a new client
-    const newClientBtnClass = "new-client-button";
-    const buttonTextContent = "+ New"
-    CreateButtons(newClientBtnClass, header, buttonTextContent);
     // append header to the main container
-    dashboardContainer.appendChild(header);
-
+    dashboardContainer.appendChild(headerContainer);
     
-    // and finally, render the table:
+    // render the table:
     const principalDiv = document.createElement("div");
     principalDiv.className = "principal-div";
+    
+    // create buttons
+    const newClientBtnClass = "new-client-button";
+    const buttonTextContent = "+ New"
+    CreateButtons(newClientBtnClass, principalDiv, buttonTextContent);
+
     dashboardContainer.appendChild(principalDiv);
     console.log(principalDiv);
 
