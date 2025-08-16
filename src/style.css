@@ -1,11 +1,19 @@
 :root {
+  /* application colors */
+  --header-color: #1e3a8a;
+  --body-color: #181818;
+  --button-color: #3b82f6;
+  --actions-color: #14b8a6;
+  --success-color: #10b981;
+  --error-color: #dc3545;
+
   font-family: "Inter", sans-serif;
   line-height: 1.5;
   letter-spacing: -0.5;
 
   color-scheme: light dark;
   color: rgba(35, 35, 35, 0.87);
-  background-color: rgb(249, 249, 249);
+  background-color: #f1f5f9;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

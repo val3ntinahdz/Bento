@@ -117,8 +117,9 @@ export const updateTable = (client) => {
     }
 }
 
-
 const selectClientFromTable = (event) => {
+    console.log("clicked edit button! the event target:", event.target);
+    
     const element = event.target.closest(".btn-edit");
     const userId = element.getAttribute("data-id");
 
@@ -128,19 +129,23 @@ const selectClientFromTable = (event) => {
 const deleteClientFromTable = async(event) => {
     const element = event.target.closest(".btn-delete");
 
-    if (await ShowAlert()) {
-        const dataId = element.getAttribute("data-id");
-    
-        try {
-            if (dataId) {
-                const deletedClient = await deleteClient(dataId);
-                console.log(deletedClient);
+    if (element.className !== ".btn-delete") { // conditional to check alert doesn't appear when clicking on edit btn
+
+        if (await ShowAlert()) {
+            const dataId = element.getAttribute("data-id");
         
-                table.deleteRow(dataId);
+            try {
+                if (dataId) {
+                    const deletedClient = await deleteClient(dataId);
+                    console.log(deletedClient);
+            
+                    table.deleteRow(dataId);
+                }
+            } catch (error) {
+                console.log(`Could not delete data from the table - ${error}`);
             }
-        } catch (error) {
-            console.log(`Could not delete data from the table - ${error}`);
         }
     }
+
 
 }
