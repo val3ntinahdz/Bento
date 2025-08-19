@@ -1,22 +1,6 @@
 {
   "clients": [
     {
-      "id": "1",
-      "name": "Larry Stylinson",
-      "email": "larryst8@gmail.com",
-      "phone": "555-123-4567",
-      "company": "StyleInc",
-      "contactDate": "04/08/2025"
-    },
-    {
-      "id": "3",
-      "name": "Diego Ramírez",
-      "email": "diegoram@email.com",
-      "phone": "555-888-4970",
-      "company": "GoPixels",
-      "contactDate": "04/08/2025"
-    },
-    {
       "id": "4",
       "name": "Sophia Nguyen",
       "email": "sophia.nguyen@wellnessco.com",
@@ -135,22 +119,6 @@
       "phone": "555-890-1120",
       "company": "EduLink",
       "contactDate": "04/18/2025"
-    },
-    {
-      "id": "19",
-      "name": "Carlos Herrera",
-      "email": "carlos.herrera@foodie.lat",
-      "phone": "555-450-9871",
-      "company": "Foodie",
-      "contactDate": "04/19/2025"
-    },
-    {
-      "id": "20",
-      "name": "Isabella Martins",
-      "email": "isabella.martins@traveljoy.pt",
-      "phone": "555-222-7410",
-      "company": "TravelJoy",
-      "contactDate": "04/19/2025"
     }
   ],
   "projects": [
@@ -159,7 +127,7 @@
       "typeOfService": "Web Development",
       "product": "E-commerce",
       "concept": "An e-commerce platform for fashion thrifting",
-      "clientId": "1"
+      "clientId": null
     },
     {
       "id": "2",
@@ -173,7 +141,7 @@
       "typeOfService": "Web Development",
       "product": "Portfolio Website",
       "concept": "A clean, minimalist portfolio for a freelance photographer",
-      "clientId": "3"
+      "clientId": null
     },
     {
       "id": "4",
@@ -285,14 +253,14 @@
       "typeOfService": "Branding & Design",
       "product": "Restaurant Branding",
       "concept": "A bold and colorful brand identity for a Latin food chain",
-      "clientId": "19"
+      "clientId": null
     },
     {
       "id": "20",
       "typeOfService": "Web Development",
       "product": "Travel Booking Site",
       "concept": "A user-friendly travel booking experience for a Portuguese agency",
-      "clientId": "20"
+      "clientId": null
     }
   ]
 }

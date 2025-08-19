@@ -46,7 +46,7 @@ export const CreateTable = async() => {
         clientsData.forEach(client => {
     
             tableHTML += `
-                <tr class="result hidden">
+                <tr class="result">
                     <th data-id=${client.id}>${client.id}</th>
                     <th>${client.name}</th>
                     <th>${client.phone}</th>
@@ -79,7 +79,7 @@ export const CreateTable = async() => {
 
 export const updateTable = (client) => {
     const rowHTML = `
-        <tr class="result hidden">
+        <tr class="result">
             <th data-id=${client.id}>${client.id}</th>
             <th>${client.name}</th>
             <th>${client.phone}</th>
