@@ -9,14 +9,6 @@
       "contactDate": "04/08/2025"
     },
     {
-      "id": "2",
-      "name": "Amelia Carter",
-      "email": "ameliac4rter@email.com",
-      "phone": "555-845-4569",
-      "company": "Cafuné Café",
-      "contactDate": "04/08/2025"
-    },
-    {
       "id": "3",
       "name": "Diego Ramírez",
       "email": "diegoram@email.com",
@@ -174,7 +166,7 @@
       "typeOfService": "Branding & Design",
       "product": "Visual Identity",
       "concept": "A vibrant and youthful brand identity for a vegan café",
-      "clientId": "2"
+      "clientId": null
     },
     {
       "id": "3",

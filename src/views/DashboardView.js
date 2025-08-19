@@ -1,6 +1,6 @@
 import { CreateButtons } from '../components/CreateButtons';
 import { CreateTable } from '../components/CreateTable';
-import { SearchInput } from '../components/SearchInput';
+import { SearchInput, searchItems } from '../components/SearchInput';
 import '../styles/dashboard.css';
 
 // SOME DOCS
@@ -25,7 +25,7 @@ export const renderDashboard = () => {
     headerContainer.appendChild(welcomeTitle);
 
     // add the search input to the header
-    SearchInput(headerContainer);
+    const searchInput = SearchInput(headerContainer);
     
     // create a new client
     // append header to the main container
@@ -39,12 +39,13 @@ export const renderDashboard = () => {
     const newClientBtnClass = "new-client-button";
     const buttonTextContent = "+ New"
     CreateButtons(newClientBtnClass, principalDiv, buttonTextContent);
-
+    
     dashboardContainer.appendChild(principalDiv);
     console.log(principalDiv);
-
+    
     CreateTable();
     
+    searchItems(searchInput);
     // append the dashboard container to our DOM´s body
     document.body.appendChild(dashboardContainer);
 }
