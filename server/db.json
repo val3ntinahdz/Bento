@@ -1,6 +1,14 @@
 {
   "clients": [
     {
+      "id": "1",
+      "name": "Larry Stylinson",
+      "email": "larryst8@gmail.com",
+      "phone": "555-123-4567",
+      "company": "StyleInc",
+      "contactDate": "04/08/2025"
+    },
+    {
       "id": "2",
       "name": "Amelia Carter",
       "email": "ameliac4rter@email.com",
@@ -15,6 +23,38 @@
       "phone": "555-888-4970",
       "company": "GoPixels",
       "contactDate": "04/08/2025"
+    },
+    {
+      "id": "4",
+      "name": "Sophia Nguyen",
+      "email": "sophia.nguyen@wellnessco.com",
+      "phone": "555-223-9976",
+      "company": "WellnessCo",
+      "contactDate": "04/10/2025"
+    },
+    {
+      "id": "5",
+      "name": "Mateo Fernández",
+      "email": "mateo.fernandez@technova.io",
+      "phone": "555-674-9023",
+      "company": "Technova",
+      "contactDate": "04/11/2025"
+    },
+    {
+      "id": "6",
+      "name": "Hannah Becker",
+      "email": "hannah.b@greenfuture.org",
+      "phone": "555-302-6481",
+      "company": "GreenFuture",
+      "contactDate": "04/12/2025"
+    },
+    {
+      "id": "7",
+      "name": "Akira Tanaka",
+      "email": "akira.t@urbanflow.jp",
+      "phone": "555-765-2211",
+      "company": "UrbanFlow",
+      "contactDate": "04/13/2025"
     }
   ],
   "projects": [
@@ -23,7 +63,7 @@
       "typeOfService": "Web Development",
       "product": "E-commerce",
       "concept": "An e-commerce platform for fashion thrifting",
-      "clientId": null
+      "clientId": "1"
     },
     {
       "id": "2",
@@ -38,6 +78,34 @@
       "product": "Portfolio Website",
       "concept": "A clean, minimalist portfolio for a freelance photographer",
       "clientId": "3"
+    },
+    {
+      "id": "4",
+      "typeOfService": "Mobile App Development",
+      "product": "Wellness App",
+      "concept": "A mindfulness and meditation app with personalized daily routines",
+      "clientId": "4"
+    },
+    {
+      "id": "5",
+      "typeOfService": "Web Development",
+      "product": "SaaS Dashboard",
+      "concept": "An interactive SaaS dashboard for a growing tech startup",
+      "clientId": "5"
+    },
+    {
+      "id": "6",
+      "typeOfService": "Branding & Design",
+      "product": "Campaign Materials",
+      "concept": "Sustainability-focused digital and print campaign for an NGO",
+      "clientId": "6"
+    },
+    {
+      "id": "7",
+      "typeOfService": "UI/UX Design",
+      "product": "Smart City App",
+      "concept": "A mobile-first platform for navigating urban transportation",
+      "clientId": "7"
     }
   ]
 }
