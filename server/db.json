@@ -1,14 +1,6 @@
 {
   "clients": [
     {
-      "id": "1",
-      "name": "Larry Stylinson",
-      "email": "larryst8@gmail.com",
-      "phone": "555-123-4567",
-      "company": "StyleInc",
-      "contactDate": "04/08/2025"
-    },
-    {
       "id": "2",
       "name": "Amelia Carter",
       "email": "ameliac4rter@email.com",
@@ -167,7 +159,7 @@
       "typeOfService": "Web Development",
       "product": "E-commerce",
       "concept": "An e-commerce platform for fashion thrifting",
-      "clientId": "1"
+      "clientId": null
     },
     {
       "id": "2",

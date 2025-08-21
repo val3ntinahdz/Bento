@@ -129,8 +129,11 @@ const selectClientFromTable = (event) => {
 }
 
 const deleteClientFromTable = async(event) => {
+    // .closest() is a very useful method that bubbles all the way up to the ancestors looking for 
+    // an element that matches the given selector -> this is called bubbling
+    // Take a look at https://javascript.info/bubbling-and-capturing to know more about this concept! 
     const deleteButton = event.target.closest(".btn-delete");
-
+    
     if (event.target === deleteButton) {
 
         if (await ShowAlert()) {

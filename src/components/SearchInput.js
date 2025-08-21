@@ -1,4 +1,5 @@
-export const SearchInput = (element) => {
+// This function creates the search feature and appends it to the main input element
+export const createSearchInput = (element) => {
     const searchInput = document.createElement('input');
     searchInput.className = "search-input";
     searchInput.setAttribute('type', 'search'); // sse type="search" for semantic meaning and built-in clear button
@@ -9,6 +10,11 @@ export const SearchInput = (element) => {
     return searchInput;
 }
 
+// This is where the search feature comes alive: 
+    // 1. We add an event listener to the search input, retrieve the row with the class .result and 
+    //    set the event target to lowerCase
+    // 2. If the search term exists, we iterate over the results array, extract the cells that match the fields we want to search over
+    //    and test if the matches exists, so we can toggle the hidden class in the rows
 export const searchItems = (element) => {
     let principalDiv = document.querySelector(".principal-div");
     const noResultsMsg = createNoResultsMsg(principalDiv);
@@ -48,6 +54,8 @@ export const searchItems = (element) => {
 
         } else {
             noResultsMsg.classList.add("hidden");
+            document.querySelector("table").classList.remove("hidden");
+            results.forEach(result => result.classList.remove("hidden"));
         }
     })
     
