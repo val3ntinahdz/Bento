@@ -71,7 +71,7 @@ export const CreateTable = async() => {
     }
 
     table.addEventListener("click", selectClientFromTable);
-    table.addEventListener("click", await deleteClientFromTable);
+    table.addEventListener("click", deleteClientFromTable);
 
     return table;
 }
