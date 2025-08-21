@@ -18,12 +18,16 @@ export const searchItems = (element) => {
         const results = document.querySelectorAll(".result");
         const searchTerm = e.target.value.toLowerCase().trim();
     
+        // Initialize a counter to track number of matches
         let matchCount = 0;
         // console.log("The event target value is: ", e.target.value);
 
+        // If the search term exists, iterate over the "results" array
         if (searchTerm) {
-            
             results.forEach(row => {
+
+                // The .cells method returns a HTMLColecction of a tr element
+                // Check the docs: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/cells
                 const name      = row.cells[1].textContent.toLowerCase();
                 const company   = row.cells[4].textContent.toLowerCase();
     

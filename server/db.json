@@ -1,116 +1,12 @@
 {
   "clients": [
     {
-      "id": "4",
-      "name": "Sophia Nguyen",
-      "email": "sophia.nguyen@wellnessco.com",
-      "phone": "555-223-9976",
-      "company": "WellnessCo",
-      "contactDate": "04/10/2025"
-    },
-    {
-      "id": "5",
-      "name": "Mateo Fernández",
-      "email": "mateo.fernandez@technova.io",
-      "phone": "555-674-9023",
-      "company": "Technova",
-      "contactDate": "04/11/2025"
-    },
-    {
-      "id": "6",
-      "name": "Hannah Becker",
-      "email": "hannah.b@greenfuture.org",
-      "phone": "555-302-6481",
-      "company": "GreenFuture",
-      "contactDate": "04/12/2025"
-    },
-    {
-      "id": "7",
-      "name": "Akira Tanaka",
-      "email": "akira.t@urbanflow.jp",
-      "phone": "555-765-2211",
-      "company": "UrbanFlow",
-      "contactDate": "04/13/2025"
-    },
-    {
-      "id": "8",
-      "name": "Elena Rossi",
-      "email": "elena.rossi@dolcevita.it",
-      "phone": "555-119-3344",
-      "company": "DolceVita",
-      "contactDate": "04/13/2025"
-    },
-    {
-      "id": "9",
-      "name": "James O'Connor",
-      "email": "j.oconnor@finrise.com",
-      "phone": "555-412-9087",
-      "company": "FinRise",
-      "contactDate": "04/14/2025"
-    },
-    {
-      "id": "10",
-      "name": "Lucía Gómez",
-      "email": "lucia.gomez@artemx.mx",
-      "phone": "555-607-3210",
-      "company": "ArteMX",
-      "contactDate": "04/14/2025"
-    },
-    {
-      "id": "11",
-      "name": "Noah Smith",
-      "email": "noahsmith@nextgenai.io",
-      "phone": "555-210-9812",
-      "company": "NextGen AI",
-      "contactDate": "04/15/2025"
-    },
-    {
-      "id": "12",
-      "name": "Priya Patel",
-      "email": "priya.p@healthfirst.in",
-      "phone": "555-908-1123",
-      "company": "HealthFirst",
-      "contactDate": "04/15/2025"
-    },
-    {
-      "id": "13",
-      "name": "Gabriel Mendes",
-      "email": "gabriel.mendes@rioevents.com",
-      "phone": "555-337-6712",
-      "company": "RioEvents",
-      "contactDate": "04/16/2025"
-    },
-    {
-      "id": "14",
-      "name": "Emily Johnson",
-      "email": "emily.johnson@bookverse.com",
-      "phone": "555-485-7732",
-      "company": "BookVerse",
-      "contactDate": "04/16/2025"
-    },
-    {
-      "id": "15",
-      "name": "Daniel Kowalski",
-      "email": "daniel.k@eurotech.pl",
-      "phone": "555-829-6612",
-      "company": "EuroTech",
-      "contactDate": "04/17/2025"
-    },
-    {
-      "id": "16",
-      "name": "Sofia Petrova",
-      "email": "sofia.petrova@fashionhub.ru",
-      "phone": "555-213-6678",
-      "company": "FashionHub",
-      "contactDate": "04/17/2025"
-    },
-    {
       "id": "17",
-      "name": "Oliver Wright",
+      "name": "Oliver Wright H.",
       "email": "oliver.wright@ecohome.uk",
       "phone": "555-321-4456",
       "company": "EcoHome",
-      "contactDate": "04/18/2025"
+      "contactDate": "2025-08-15"
     },
     {
       "id": "18",
@@ -119,6 +15,22 @@
       "phone": "555-890-1120",
       "company": "EduLink",
       "contactDate": "04/18/2025"
+    },
+    {
+      "id": "19",
+      "name": "Carlos Herrera",
+      "email": "carlos.herrera@foodie.lat",
+      "phone": "555-450-9871",
+      "company": "Foodie",
+      "contactDate": "04/19/2025"
+    },
+    {
+      "id": "20",
+      "name": "Isabella Martins",
+      "email": "isabella.martins@traveljoy.pt",
+      "phone": "555-222-7410",
+      "company": "TravelJoy",
+      "contactDate": "04/19/2025"
     }
   ],
   "projects": [
@@ -148,91 +60,91 @@
       "typeOfService": "Mobile App Development",
       "product": "Wellness App",
       "concept": "A mindfulness and meditation app with personalized daily routines",
-      "clientId": "4"
+      "clientId": null
     },
     {
       "id": "5",
       "typeOfService": "Web Development",
       "product": "SaaS Dashboard",
       "concept": "An interactive SaaS dashboard for a growing tech startup",
-      "clientId": "5"
+      "clientId": null
     },
     {
       "id": "6",
       "typeOfService": "Branding & Design",
       "product": "Campaign Materials",
       "concept": "Sustainability-focused digital and print campaign for an NGO",
-      "clientId": "6"
+      "clientId": null
     },
     {
       "id": "7",
       "typeOfService": "UI/UX Design",
       "product": "Smart City App",
       "concept": "A mobile-first platform for navigating urban transportation",
-      "clientId": "7"
+      "clientId": null
     },
     {
       "id": "8",
       "typeOfService": "Branding & Design",
       "product": "Luxury Packaging",
       "concept": "Elegant packaging design for an Italian lifestyle brand",
-      "clientId": "8"
+      "clientId": null
     },
     {
       "id": "9",
       "typeOfService": "FinTech Development",
       "product": "Mobile Banking App",
       "concept": "A secure and user-friendly digital banking experience",
-      "clientId": "9"
+      "clientId": null
     },
     {
       "id": "10",
       "typeOfService": "Web Development",
       "product": "Art Gallery Website",
       "concept": "An online gallery for contemporary Mexican artists",
-      "clientId": "10"
+      "clientId": null
     },
     {
       "id": "11",
       "typeOfService": "AI Development",
       "product": "Chatbot",
       "concept": "An AI-powered customer service assistant",
-      "clientId": "11"
+      "clientId": null
     },
     {
       "id": "12",
       "typeOfService": "Mobile App Development",
       "product": "Health Tracker",
       "concept": "A health tracking app for personalized nutrition and fitness",
-      "clientId": "12"
+      "clientId": null
     },
     {
       "id": "13",
       "typeOfService": "Web Development",
       "product": "Event Platform",
       "concept": "An interactive event booking platform for festivals",
-      "clientId": "13"
+      "clientId": null
     },
     {
       "id": "14",
       "typeOfService": "Branding & Design",
       "product": "Digital Publishing",
       "concept": "A strong visual identity for an online book club",
-      "clientId": "14"
+      "clientId": null
     },
     {
       "id": "15",
       "typeOfService": "Software Development",
       "product": "Automation Tool",
       "concept": "A workflow automation system for a European tech firm",
-      "clientId": "15"
+      "clientId": null
     },
     {
       "id": "16",
       "typeOfService": "Web Development",
       "product": "Fashion E-commerce",
       "concept": "An online marketplace for emerging Russian designers",
-      "clientId": "16"
+      "clientId": null
     },
     {
       "id": "17",
@@ -253,14 +165,14 @@
       "typeOfService": "Branding & Design",
       "product": "Restaurant Branding",
       "concept": "A bold and colorful brand identity for a Latin food chain",
-      "clientId": null
+      "clientId": "19"
     },
     {
       "id": "20",
       "typeOfService": "Web Development",
       "product": "Travel Booking Site",
       "concept": "A user-friendly travel booking experience for a Portuguese agency",
-      "clientId": null
+      "clientId": "20"
     }
   ]
 }

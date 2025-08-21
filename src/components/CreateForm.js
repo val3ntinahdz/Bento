@@ -20,7 +20,7 @@ export const CreateForm = () => {
     formGroup.className = "form-group";
     form.appendChild(formGroup)
 
-    // create inputs!
+    // Create inputs in the form re-using the function called "createFormFields()"
     formGroup.appendChild(createFormFields({
         label: "Client name",
         type: "text",

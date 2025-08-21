@@ -71,7 +71,7 @@ export const CreateTable = async() => {
     }
 
     table.addEventListener("click", selectClientFromTable);
-    table.addEventListener("click", deleteClientFromTable);
+    table.addEventListener("click", await deleteClientFromTable);
 
     return table;
 }
@@ -120,32 +120,37 @@ export const updateTable = (client) => {
 const selectClientFromTable = (event) => {
     console.log("clicked edit button! the event target:", event.target);
     
-    const element = event.target.closest(".btn-edit");
-    const userId = element.getAttribute("data-id");
+    const editButton = event.target.closest(".btn-edit");
 
-    showModal(userId);
+    if (event.target === editButton) { // If element exists!
+        const userId = editButton.getAttribute("data-id");
+        showModal(userId);
+    }
 }
 
 const deleteClientFromTable = async(event) => {
-    const element = event.target.closest(".btn-delete");
+    const deleteButton = event.target.closest(".btn-delete");
 
-    if (element.className !== ".btn-delete") { // conditional to check alert doesn't appear when clicking on edit btn
+    if (event.target === deleteButton) {
 
         if (await ShowAlert()) {
-            const dataId = element.getAttribute("data-id");
+            const dataId = deleteButton.getAttribute("data-id");
+            console.log(dataId)
         
             try {
                 if (dataId) {
                     const deletedClient = await deleteClient(dataId);
                     console.log(deletedClient);
             
-                    table.deleteRow(dataId);
+                    const rowToDelete =  deleteButton.closest("tr");
+                    rowToDelete.remove();
+    
+                    // check if the element´s data-id matches the dataId, if so, remove it from the DOM
+    
                 }
             } catch (error) {
                 console.log(`Could not delete data from the table - ${error}`);
             }
         }
     }
-
-
 }
