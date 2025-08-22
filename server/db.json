@@ -1,22 +1,6 @@
 {
   "clients": [
     {
-      "id": "2",
-      "name": "Amelia Carter",
-      "email": "ameliac4rter@email.com",
-      "phone": "555-845-4569",
-      "company": "Cafuné Café",
-      "contactDate": "04/08/2025"
-    },
-    {
-      "id": "3",
-      "name": "Diego Ramírez",
-      "email": "diegoram@email.com",
-      "phone": "555-888-4970",
-      "company": "GoPixels",
-      "contactDate": "04/08/2025"
-    },
-    {
       "id": "4",
       "name": "Sophia Nguyen",
       "email": "sophia.nguyen@wellnessco.com",
@@ -166,14 +150,14 @@
       "typeOfService": "Branding & Design",
       "product": "Visual Identity",
       "concept": "A vibrant and youthful brand identity for a vegan café",
-      "clientId": "2"
+      "clientId": null
     },
     {
       "id": "3",
       "typeOfService": "Web Development",
       "product": "Portfolio Website",
       "concept": "A clean, minimalist portfolio for a freelance photographer",
-      "clientId": "3"
+      "clientId": null
     },
     {
       "id": "4",

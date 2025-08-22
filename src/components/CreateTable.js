@@ -1,5 +1,6 @@
 import { showModal } from "../clients/presentation/RenderModal";
 import { deleteClient, getClients } from "../services/api";
+import { showDetailPanel } from "./ShowDetailPanel";
 import { ShowAlert } from "./ShowAlert";
 
 let table;
@@ -19,6 +20,7 @@ const createTableStructure = () => {
             <th>Contact Date</th>
             <th>Edit</th>
             <th>Delete</th>
+            <th>View Details</th>
         </tr>
     `;
 
@@ -59,6 +61,9 @@ export const CreateTable = async() => {
                     <th>
                         <a href="#/" class="btn-delete show-alert" data-id="${client.id}">Delete</a>
                     </th>
+                    <th>
+                        <a href="#/" class="btn-show" data-id="${client.id}">View Details</a>
+                    </th>
                 </tr>
     
             `;
@@ -93,6 +98,9 @@ export const updateTable = (client) => {
             <th>
                 <a href="#/" class="btn-delete show-alert" data-id="${client.id}">Delete</a>
             </th>
+            <th>
+                <a href="#/" class="btn-show" data-id="${client.id}">View Details</a>
+            </th>
         </tr>
     `;
 
@@ -118,13 +126,20 @@ export const updateTable = (client) => {
 }
 
 const selectClientFromTable = (event) => {
-    console.log("clicked edit button! the event target:", event.target);
-    
-    const editButton = event.target.closest(".btn-edit");
+    // console.log("clicked edit button! the event target:", event.target);
+    const targetButton = event.target.closest("a");
+    if (!targetButton) return;
 
-    if (event.target === editButton) { // If element exists!
-        const userId = editButton.getAttribute("data-id");
+    const isEditButton = targetButton.classList.contains("btn-edit");
+    const isShowDetailButton = targetButton.classList.contains("btn-show");
+
+    const userId = targetButton.getAttribute("data-id");
+    
+    // Approach: Event Delegation
+    if (isEditButton) {
         showModal(userId);
+    } else if (isShowDetailButton) {
+        showDetailPanel(userId);
     }
 }
 
