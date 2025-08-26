@@ -3,9 +3,13 @@ import '../styles/panel.css';
 
 export const createClientDetailPanel = () => {
     const dashboard = document.querySelector(".dashboard-container");
+    
+    const overlayContainer = document.createElement("div");
+    overlayContainer.className = "overlay hidden";
 
     const panelContainer = document.createElement("div");
     panelContainer.className = "client-detail-panel hidden";
+
 
     const closePanelBtn = document.createElement("button");
     closePanelBtn.className = "close-btn";
@@ -15,19 +19,24 @@ export const createClientDetailPanel = () => {
     clientDetailContainer.className = "client-detail-container";
 
     closePanelBtn.addEventListener("click", () => {
+        overlayContainer.classList.add("hidden")
         panelContainer.classList.add("hidden")
     })
 
     panelContainer.append(closePanelBtn, clientDetailContainer);
-    dashboard.appendChild(panelContainer);
+    overlayContainer.appendChild(panelContainer)
+    dashboard.appendChild(overlayContainer);
 }
 
 export const showDetailPanel = (clientId) => {
     loadClientDetails(clientId);
     // panel container
-    const panel = document.querySelector(".client-detail-panel");
+    const overlay = document.querySelector(".overlay");
+    const panel = document.querySelector(".overlay .client-detail-panel");
+
     console.log("panel container:", panel);
 
+    overlay.classList.remove("hidden");
     panel.classList.remove("hidden");
 }
 
