@@ -1,7 +1,7 @@
-import { showModal } from "../clients/presentation/RenderModal";
+import { showModal } from "../clients/presentation/renderModal";
 import { deleteClient, getClients } from "../services/api";
-import { showDetailPanel } from "./ShowDetailPanel";
-import { ShowAlert } from "./ShowAlert";
+import { showDetailPanel } from "./showDetailPanel";
+import { showAlert } from "./showAlert";
 
 let table;
 
@@ -31,7 +31,7 @@ const createTableStructure = () => {
 }
 
 
-export const CreateTable = async() => {
+export const createTable = async () => {
     // check if table already exists. If it does, then only update the tbody structure of the table 
     const clientsData = await getClients();
 
@@ -143,7 +143,7 @@ const selectClientFromTable = (event) => {
     }
 }
 
-const deleteClientFromTable = async(event) => {
+const deleteClientFromTable = async (event) => {
     // .closest() is a very useful method that bubbles all the way up to the ancestors looking for 
     // an element that matches the given selector -> this is called bubbling
     // Take a look at https://javascript.info/bubbling-and-capturing to know more about this concept! 
@@ -151,7 +151,7 @@ const deleteClientFromTable = async(event) => {
     
     if (event.target === deleteButton) {
 
-        if (await ShowAlert()) {
+        if (await showAlert()) {
             const dataId = deleteButton.getAttribute("data-id");
             console.log(dataId)
         

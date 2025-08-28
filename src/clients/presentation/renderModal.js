@@ -1,10 +1,10 @@
-import { CreateTable, updateTable } from "../../components/CreateTable";
+import { createTable, updateTable } from "../../components/createTable";
 import { addClient, getClient, updateClient } from "../../services/api";
 
 let modal, form;
 let loadedClient = {};
 
-export const RenderModal = () => 
+export const renderModal = () => 
 {
     // add event to handle modal pops (show & hide) in buttons (+)
     modal = document.querySelector(".modal-container")
@@ -72,8 +72,8 @@ export const RenderModal = () =>
                 }
 
 
-                hideModal(); // render table agaiN!
-                await CreateTable()
+                hideModal(); // render table again
+                await createTable()
             }
 
         } catch (error) {
@@ -82,7 +82,7 @@ export const RenderModal = () =>
     })
 }
 
-export const showModal = async(id) => {
+export const showModal = async (id) => {
     modal?.classList.remove("hide-modal");
     // setFormValues(client);
     if (!id) return;

@@ -1,7 +1,7 @@
 // here we create our custom buttons 
 import '../styles/buttons.css';
 
-export const CreateButtons = (btnClass, htmlElement, buttonContent = "") => {
+export const createButtons = (btnClass, htmlElement, buttonContent = "") => {
     const newButton = document.createElement("button");
     newButton.className = btnClass;
 

@@ -1,8 +1,9 @@
-import { RenderModal } from './clients/presentation/RenderModal';
-import { createClientDetailPanel } from './components/ShowDetailPanel';
-import { CreateForm } from './components/CreateForm';
-import { createAlertHTML } from './components/ShowAlert';
 import './style.css'
+
+import { renderModal } from './clients/presentation/renderModal';
+import { createClientDetailPanel } from './components/showDetailPanel';
+import { createForm } from './components/createForm';
+import { createAlertHTML } from './components/showAlert';
 import { renderDashboard } from './views/DashboardView';
 
 document.querySelector('#app').innerHTML = `
@@ -10,8 +11,7 @@ document.querySelector('#app').innerHTML = `
 `
 
 renderDashboard();
-CreateForm();
-RenderModal();
+createForm();
+renderModal();
 createAlertHTML();
 createClientDetailPanel();
-// showDetailPanel();

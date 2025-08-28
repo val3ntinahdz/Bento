@@ -34,7 +34,7 @@ export const createAlertHTML = () => {
 
 // This function ensures that the alert exists, if so, we display it, and return a promise, 
 // connected the event listener previously created in our createAlertHTML() function
-export const ShowAlert = () => {
+export const showAlert = () => {
     const customAlert = document.getElementById('customAlert');
 
     if (customAlert) {

@@ -40,7 +40,7 @@ export const showDetailPanel = (clientId) => {
     panel.classList.remove("hidden");
 }
 
-const loadClientDetails = async(id) => {
+const loadClientDetails = async (id) => {
     const detailContainer = document.querySelector(".client-detail-container");
     detailContainer.innerHTML = "";
 

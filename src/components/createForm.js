@@ -1,7 +1,7 @@
 import '../styles/forms.css';
-import { CreateButtons } from './CreateButtons';
+import { createButtons } from './createButtons';
 
-export const CreateForm = () => {
+export const createForm = () => {
     const dashboard = document.querySelector(".dashboard-container");
 
     const modal = document.createElement("div");
@@ -60,7 +60,7 @@ export const CreateForm = () => {
     // create a button
     const btnClass = "form-button";
     const btnContent = "Save";
-    CreateButtons(btnClass, formGroup, btnContent);
+    createButtons(btnClass, formGroup, btnContent);
     
     modal.append(form);
     dashboard.append(modal);

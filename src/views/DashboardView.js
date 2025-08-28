@@ -1,6 +1,6 @@
-import { CreateButtons } from '../components/CreateButtons';
-import { CreateTable } from '../components/CreateTable';
-import { createSearchInput, searchItems } from '../components/SearchInput';
+import { createButtons } from '../components/createButtons';
+import { createTable } from '../components/createTable';
+import { createSearchInput, searchItems } from '../components/createSearchInput';
 import '../styles/dashboard.css';
 
 // SOME DOCS
@@ -38,12 +38,12 @@ export const renderDashboard = () => {
     // create buttons
     const newClientBtnClass = "new-client-button";
     const buttonTextContent = "+ New"
-    CreateButtons(newClientBtnClass, principalDiv, buttonTextContent);
+    createButtons(newClientBtnClass, principalDiv, buttonTextContent);
     
     dashboardContainer.appendChild(principalDiv);
     console.log(principalDiv);
     
-    CreateTable();
+    createTable();
     
     searchItems(searchInput);
     // append the dashboard container to our DOM´s body
